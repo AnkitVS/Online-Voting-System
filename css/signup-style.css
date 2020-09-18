@@ -1,0 +1,116 @@
+body{
+    background-color: black;
+    font-family: 'Lucida Bright';
+    justify-items: center;
+    align-items: center;
+  }
+  
+  .signup-box {
+    position: relative;
+    width: 650px;
+    height: fit-content;
+    margin: 100px auto ;
+    padding: 50px;
+    background:url(/res/img/sign_up.jpg) center;   
+    background-size: cover;
+    opacity: 0.8;
+    box-shadow: 0px 0px 100px 5px #cad6ec inset;
+  }
+
+  .signup-box:hover,
+  .signup-box:focus{
+    animation: box-anim 5s linear infinite;
+     
+  }
+@keyframes box-anim{
+  0%{ opacity:1;box-shadow: 10px 0px 50px -5px #e45858 ;}
+  20%{ opacity:.5;box-shadow: 0px 10px 50px 5px #817fff ;}
+  40%{ opacity:.7;box-shadow: 10px 10px 50px 5px #e45858 ;}
+  60%{ opacity:.6;box-shadow: 0px 10px 50px 5px #817fff ;}
+  80%{ opacity:.8;box-shadow: 10px 0px 50px 5px #e45858 ;}
+  100%{ opacity:.5;box-shadow: 10px 10px 50px 5px #817fff ;}
+}
+/*Box Design-------END*/
+
+
+/*Form Design-------START*/
+table{
+  width: fit-content;
+  font-family: 'Times New Roman', Times, serif;
+  font-size: large ;
+  font-weight: bold;
+}
+th,td{
+padding: 8px;
+border-spacing: 2px;
+}
+.cap{
+  margin-left:200px;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 35px ;
+  font-weight: bold;
+  white-space: nowrap;
+  overflow: hidden;
+  animation: typo 3s steps(6) infinite normal both;
+}
+
+@keyframes typo {
+    from {
+        width: 0;
+    }
+
+    to {
+        width: 5em;
+    }
+}
+/*Input Fields Design-------START*/
+.inp-field {
+  display: block;
+  width: 170px;
+  height: 25px;
+  border-radius: 20px;
+  opacity: 0.4;
+  font-size: 14px;
+  font-family: 'Times New Roman';
+}
+input[type="file"]{
+  font-size: small;
+}
+input[type="file"]:focus,
+input[type="file"]:hover{
+  font-size: small;
+}
+.inp-field:focus,
+.inp-field:hover {
+  width: fit-content;
+  border: none;
+  overflow: hidden;
+  opacity: 1;
+  background-color: rgba(245, 245, 245, 0.596);
+  color: #180e1f;
+}
+/*Input Fields Design-------END*/
+  form {
+    padding-top: 20px;
+  }
+
+/*Form Design-------END*/
+
+/*SIGN UP Button Design-----START */
+.signup {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  padding: 1em 2em;
+  transition: 0.3s;
+  color: #8fc866;
+}
+
+.signup:hover,
+.signup:focus {
+    box-shadow: inset 6.5em 0 0 0 #e45858;
+    border: #e4cb58;
+    color: #fff;
+    letter-spacing:2px;
+}
+/*SIGN UP Button Design-----END */

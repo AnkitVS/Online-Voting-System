@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Sign Up</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="css/signup-style.css">
+    <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+    <script>
+        function validation() {
+            var RE_EMAIL = /^(\w+[\-\.])*\w+@(\w+\.)+[A-Za-z]+$/;
+            var RE_PASSWORD = /^[A-Za-z\d]{6,8}$/;
+            var RE_NAME = /^[A-Za-z]$/;
+            var RE_MOB = /^[6-9]{3}-[0-9]{2}-[0-9]{3}$/;
+            var firstname = document.forms["myForm"]["fname"].value;
+            var mobile = document.forms["myForm"]["mnum"].value;
+            var email = document.forms["myForm"]["email"].value;
+            var password = document.forms["myForm"]["psw"].value;
+            var rep_password = document.forms["myForm"]["psw-repeat"].value;
+            if (!RE_NAME.test(firstname)) { alert("Enter a valid Name."); document.forms["myForm"]["fname"].focus(); return false; }
+            if (!RE_MOB.test(mobile)) { alert("Enter a valid Mobile Number."); document.forms["myForm"]["fname"].focus(); return false; }
+            if (!RE_PASSWORD.test(password)) { alert("You must enter a valid password."); document.forms["myForm"]["fname"].focus(); return false; }
+            if (!RE_EMAIL.test(email)) { alert("Enter Valid Email Address"); document.forms["myForm"]["fname"].focus(); return false; }
+        }
+    </script>
+</head>
+
+<body>
+    <div class="continer">
+        <div class="signup-box">
+            <p class="cap">SIGN UP</p>
+            <form name="myForm">
+                <table>
+                    <tr>
+                        <td>Name</td>
+                        <td><input type="text" class="inp-field" placeholder="Enter Full Name" name="fname" required>
+                        </td>
+                        <td>Contact Number</td>
+                        <td><input type="tel" class="inp-field" placeholder="Enter Mobile Number" name="mnum" " required></td>
+                    </tr>
+                    <tr>
+                        <td>Date of Birth</td>
+                        <td><input type=" date" class="inp-field" placeholder="Enter DOB" name="dob" required></td>
+                        <td>Email</td>
+                        <td><input type="email" class="inp-field" placeholder="Enter Email" name="email" required></td>
+                    </tr>
+                    <tr>
+                        <td>Password</td>
+                        <td><input type="password" class="inp-field" placeholder="Enter Password" name="psw" required>
+                        </td>
+                        <td>Repeat Password</td>
+                        <td><input type="password" class="inp-field" placeholder="Repeat Password" name="psw-repeat"
+                                required>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <select name="role" id="role">
+                                <option value="admin">ADMIN</option>
+                                <option value="voter">Voter</option>
+                                <option value="candid">Candidate</option>
+                            </select>
+                        </td>
+                        <td>Verfication Document</td>
+                        <td colspan="2"><input type="file" class="inp-field" name="vfile" required></td>
+                    </tr>
+                </table>
+            </form>
+            <button class="signup" onclick="validation()">Sign Up</button>
+        </div>
+    </div>
+</body>
+
+</html>
