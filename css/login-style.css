@@ -2,41 +2,54 @@ body{
   background-color: rgb(0, 0, 0);
   font-family: 'Lucida Bright';
 }
-
-/* Main Container design  ------ START*/
+/*--------Main Container design  ------ START--------*/
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
+    grid-template-rows: 40px 50px auto auto auto;
+    height: 100%;
+}
+/*--------Main Container design  ------ END --------*/
+/*--------Login-Box design  ------ START --------*/
 .login-box {
-  position: relative;
-  width: 400px;
-  margin: 100px auto ;
-  padding: 60px 80px;
-  background:url(/res/img/log_back.jpg) center;   
+  grid-area: 3 / 3 / 4 / 4;
+  margin: 40px 40px ; 
+  max-width: 600px;
+  max-height: 500px;
+  background:url(/res/img/log_back.jpg);   
+  background-repeat: no-repeat;
   background-size: cover;
+  background-position: center;
   opacity: 0.6;
+  padding: 10px;
   box-shadow: 0px 30px 100px -5px #eceaca inset;
 }
 .login-box:hover,
 .login-box:focus{
     box-shadow: 0px 30px 50px -5px #ffdd7f ;
 }
-/* Main Container design  ------ END*/
+/*---------Login-Box design  ------ END------*/
 
-hr {
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  top: 85px;
-  position: relative;
+/*---------Heading design  ------ END------*/
+.heading{
+  width: 130px;
+  padding: 10px;
+  height: 30px;
+  border: #180e1f solid 2px;
+  
 }
 
+.heading h2 {
+  border-bottom: 2px solid #15213b;
+  font-size: 18px;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+/*---------heading design  ------ END------*/
+
+/*-----------Form  design  ------ Start---------*/
 form {
-  padding-top: 80px;
-}
-
-h2 {
-    border-bottom: 2px solid #15213b;
-    padding-left: 12px;
-    font-size: 25px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
-    display: inline-block;
+  padding: 80px;
 }
 
 span {
@@ -47,7 +60,7 @@ span {
   color: azure;
 }
 
-/* Input design  ------ START*/
+/*-------------Input design  ------ START---------*/
 .inp-field {
   display: block;
   height: 25px;
@@ -72,10 +85,10 @@ h2,
 span {
   margin-left: 10px;
 }
-/* Input design  ------ END*/
+/*-------------Input design  ------ END-------*/
 
 
-/* Button design  ------ START*/
+/*---------Button design  ------ START---------*/
 .signin {
     background: none;
     border: 2px solid;
@@ -96,4 +109,13 @@ span {
 a{
   text-decoration: none;
 }
-/* Button design ------ END*/
+/*----------Button design ------ END-----*/
+
+/*--------Footer  design  ------ Start------*/
+footer{
+  grid-area: 5 / 1 / 6 / 6;
+}
+
+footer iframe{
+  width: 100%;
+}
