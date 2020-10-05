@@ -5,94 +5,143 @@ body{
 /*--------Main Container design  ------ START--------*/
 .container{
     display: grid;
-    grid-template-columns: 1fr 1fr 5fr 1fr 1fr;
-    grid-template-rows: 40px 50px auto auto auto;
+    grid-template-columns: auto 20vh 20vh 20vh 20vh 20vh auto;
+    grid-template-rows: auto 5fr 5fr 5fr 5fr 5fr auto;
     height: 100%;
 }
 /*--------Main Container design  ------ END --------*/
 /*--------Login-Box design  ------ START --------*/
 .login-box {
-  grid-area: 3 / 3 / 4 / 4;
-  margin: 40px 40px ; 
-  max-width: 600px;
-  max-height: 500px;
+  grid-area: 3 / 2 / 6 / 7;
+  
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  
+  margin: 40px;
+  max-width: 500px;
+  max-height: 400px;
+  
   background:url(/res/img/log_back.jpg);   
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  
   opacity: 0.6;
-  padding: 10px;
+  z-index: 5;
   box-shadow: 0px 30px 100px -5px #eceaca inset;
 }
 .login-box:hover,
 .login-box:focus{
     box-shadow: 0px 30px 50px -5px #ffdd7f ;
 }
-/*---------Login-Box design  ------ END------*/
-
-/*---------Heading design  ------ END------*/
+/*---------Heading design  ------ Start------*/
 .heading{
-  width: 130px;
-  padding: 10px;
-  height: 30px;
+  width: 100px;
+  margin-left: 80px;
+  padding-left: 5px;
   border: #180e1f solid 2px;
-  
 }
 
 .heading h2 {
+  width: 90px;
   border-bottom: 2px solid #15213b;
   font-size: 18px;
+  font-weight: bolder;
   text-transform: uppercase;
   letter-spacing: 1.5px;
 }
 /*---------heading design  ------ END------*/
 
 /*-----------Form  design  ------ Start---------*/
-form {
-  padding: 80px;
+form{
+  width: 300px;
+  height: 200px;
+  margin-left: 70px;/* border: #8fc866 2px solid; */
 }
 
-span {
-  text-transform: uppercase;
-  font-size: 16px;
-  position: relative;
-  top: -65px;
-  color: azure;
+.form-control {
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	position: relative;
 }
 
-/*-------------Input design  ------ START---------*/
-.inp-field {
-  display: block;
+.form-control label {
+	display: inline-block;
+  margin-bottom: 3px;
+  font-weight: 900;
+}
+
+
+.form-control input {
+	display: block;
+	font-family: inherit;
+	font-size: 14px;
+	padding: 10px;
   height: 25px;
+  width: 300px;
   border-radius: 20px;
-  opacity: 0.1;
-  margin-bottom: 8px;
-  font-size: 14px;
-  font-family: 'Times New Roman';
+  border: none;
+  opacity: 0.3;
+  margin: 6px;
+}
+
+.form-control input:focus {
+	outline: 0;
+	border: #777 2px solid;
+}
+
+.form-control.success input {
+	border: #2ecc71 2px solid;
+}
+
+.form-control.error input {
+	border: #e74c3c  2px solid;
+}
+
+.form-control i {
+	visibility: hidden;
+	position: absolute;
+	top: 35px;
+	right: 10px;
+}
+
+.form-control.success i.fa-check-circle {
+	color: #2ecc71;
+	visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle {
+	color: #e74c3c;
+	visibility: visible;
+}
+
+.form-control small {
+	color: #e74c3c;
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	visibility: hidden;
+}
+
+.form-control.error small {
+	visibility: visible;
 }
 
 .inp-field:focus,
 .inp-field:hover {
-  width: auto;
   opacity: 1;
-  border: none;
   background-color: rgba(245, 245, 245, 0.596);
   font: inherit;
   color: #180e1f;
 }
-
-h2,
-span {
-  margin-left: 10px;
-}
-/*-------------Input design  ------ END-------*/
-
 
 /*---------Button design  ------ START---------*/
 .signin {
     background: none;
     border: 2px solid;
     font: inherit;
+    margin-top: 20px;
     padding: 1em 2em;
     transition: 0.3s;
     color: #8fc866;
@@ -110,12 +159,143 @@ a{
   text-decoration: none;
 }
 /*----------Button design ------ END-----*/
+/*---------Login-Box design  ------ END------*/
 
-/*--------Footer  design  ------ Start------*/
-footer{
-  grid-area: 5 / 1 / 6 / 6;
-}
-
-footer iframe{
+/*----------Backgrond design ------ START--*/
+/* .scene {
+  grid-area: 2 / 1 / 8 / 8;
+  background-image: url('es/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   width: 100%;
+  height: 100%;
+  z-index: 1;
 }
+
+.cont {
+  grid-area: 1 / 1 / 7 / 8;
+  width: 100%;
+  height: 100vh;
+  z-index: 2;
+}
+
+.cont i {
+  position: absolute;
+  background: #ffffff;
+  border-radius: 50%;
+  animation: stars linear infinite;
+  z-index: 2;
+}
+
+@keyframes stars {
+  0% {
+      opacity: 0;
+      transform: translateY(0);
+  }
+
+  10%,
+  90% {
+      opacity: 1;
+  }
+
+  100% {
+      opacity: 0;
+      transform: translateY(-3px);
+  }
+}
+
+.mount {
+  grid-area: 2 / 1 / 8 / 8;
+  height: 100%;
+  width: 100%;
+  z-index: 5;
+  opacity: .9;
+  background-image: url('/arto-marttinen-K2K1Ec_51SA-unsplash_mount_1.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.moon {
+  grid-area: 1 / 2 / 5 / 8;
+  max-height: 600px;
+  max-width: 800px;
+  z-index: 3;
+  opacity: .7;
+  animation: moon 80s infinite ease-in-out;
+}
+
+@keyframes moon {
+  0% {
+      background-image: url(/es/m1.png);
+      transform: rotate(-40deg);
+  }
+
+  12.5% {
+      background-image: url(/es/m2.png);
+  }
+
+  25% {
+      background-image: url(/es/m3.png);
+  }
+
+  37.5% {
+      background-image: url(/es/m4.png);
+  }
+
+  50% {
+      background-image: url(/es/m5.png);
+  }
+
+  62.5% {
+      background-image: url(/es/m6.png);
+  }
+
+  75% {
+      background-image: url(/es/m7.png);
+  }
+
+  100% {
+      background-image: url(/es/m8.png);
+  }
+}
+
+.cloud {
+  grid-area: 1 /1 / 8 / 7;
+  z-index: 4;
+}
+
+.cloud .cloud1 {
+  opacity: .8;
+  top: 0px;
+  width: 800px;
+  height: 300px;
+  animation: cloud 30s infinite linear;
+}
+
+.cloud .cloud4 {
+  position: absolute;
+  top: 50px;
+  height: 50%;
+  width: 50%;
+  animation: cloud 30s infinite linear;
+}
+
+.cloud .cloud5 {
+  position: absolute;
+  top: 50px;
+  height: 50%;
+  width: 50%;
+  animation: cloud 30s infinite linear alternate;
+}
+
+@keyframes cloud {
+  0% {
+      transform: translateX(100%);
+  }
+
+  0% {
+      transform: translateX(-100%);
+  }
+} */
