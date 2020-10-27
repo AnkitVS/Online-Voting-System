@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+}
+main {
+  
+  height: 40em;
+  width: 100%;
+  display: grid;
+  grid-template-columns:auto 10em 25em 10em auto ;
+  grid-template-rows:auto 2em 32em 2em auto ;
+  background-color: rgb(37, 51, 53);
+}
+/* ---------Container Design Start---------- */
+.container {
+  grid-area: 3/3/4/4;
+  background-color: #f0fff0;
+  border-radius: 20px;
+  
+}
+
+.container:hover,
+.container:focus{
+  animation: box linear 3s infinite;
+}
+@keyframes box{
+  0%{box-shadow: 3px 3px 50px 3px #7efc0033;}
+  50%{box-shadow: none;}
+  100%{box-shadow: 3px 3px 50px 3px #7efc002f;}
+}
+.form-ele{
+    margin: 20px;
+}
+.form-ele label{
+    display: block;
+    font-size: large;
+    font-weight: bold;
+    letter-spacing: .1em;
+    margin-bottom: 5px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.form-ele input{
+    margin: 0 50px 0;
+    border-style: hidden hidden inset;
+    width: 200px;
+    background-color: rgba(255, 0, 0, 0);
+}
+form button{
+    margin-left: 40%;
+    padding: 10px;
+    width: fit-content;
+    font-size: larger;
+    letter-spacing: .1em;
+    border-style: hidden;
+    border-radius: 20px;
+}
+
+/* ---------Container Design Start---------- */
+footer{
+  height: 4em;
+}
+header{
+  height: 3em;
+}

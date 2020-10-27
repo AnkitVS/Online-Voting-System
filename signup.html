@@ -11,80 +11,84 @@
 </head>
 
 <body>
-    <div class="container">
+    <header>
         <nav>
             <ul>
                 <li><a href="land.html" style="float: left;">Home</a></li>
                 <li><a href="reg.html" style="float: right;">Login/Register</a></li>
             </ul>
         </nav>
+    </header>
+    <main>
+
         <div class="signup-box">
             <p class="cap">SIGN UP</p>
-            <form name="myForm">
+            <form name="form" action="signUp" method="post">
                 <div class="form-control" id="form-item1">
-                    <label for="fname" style="color: black;"><b>Name</b></label>
-                    <input type="text" class="inp-field" placeholder="Enter Full Name" name="fname" required>
+                    <label><b>Name</b></label>
+                    <input type="text" class="inp-field" placeholder="Enter Full Name" id="fname" name="fname">
                     <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
 
                 <div class="form-control" id="form-item2">
-                    <label for="mnum" style="color: black;"><b>Contact Number</b></label>
-                    <input type="tel" class="inp-field" placeholder="Enter Mobile Number" name="mnum" required>
-                    <i class=" fas fa-check-circle"></i>
+                    <label><b>Contact Number</b></label>
+                    <input type="tel" class="inp-field" placeholder="Enter Mobile Number" id="mnum" name="mnum">
+                    <i class="fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
 
                 <div class="form-control" id="form-item3">
-                    <label for="dob" style="color: black;"><b>Date of Birth</b></label>
-                    <input type=" date" class="inp-field" placeholder="Enter DOB" name="dob" required>
+                    <label><b>Date of Birth</b></label>
+                    <input type="date" class="inp-field" id="dob" name="dob">
                     <i class=" fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
 
                 <div class="form-control" id="form-item4">
-                    <label for="email" style="color: black;"><b>Email</b></label>
-                    <input type="email" class="inp-field" placeholder="Enter Email" name="email" required>
+                    <label><b>Email</b></label>
+                    <input type="email" class="inp-field" placeholder="Enter Email" id="email" name="email">
                     <i class=" fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
 
                 <div class="form-control" id="form-item5">
-                    <label for="psw" style="color: black;"><b>Password</b></label>
-                    <input type="password" class="inp-field" placeholder="Enter Password" name="psw" required>
+                    <label><b>Password</b></label>
+                    <input type="password" class="inp-field" placeholder="Enter Password" id="psw" name="psw">
                     <i class=" fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
 
                 <div class="form-control" id="form-item6">
-                    <label for="psw-repeat" style="color: black;"><b>Repeat Password</b></label>
-                    <input type="password" class="inp-field" placeholder="Repeat Password" name="psw-repeat" required>
+                    <label><b>Repeat Password</b></label>
+                    <input type="password" class="inp-field" placeholder="Repeat Password" id="psw-repeat"
+                        name="psw-repeat">
                     <i class=" fas fa-check-circle"></i>
                     <i class="fas fa-exclamation-circle"></i>
                     <small>Error message</small>
                 </div>
+
                 <div class="form-control" id="form-item7">
-                    <select name="role" id="role">
+                    <label for="file"><b>Verification Document</b></label>
+                    <input type="file" class="inp-field" name="vfile">
+                </div>
+                <div class="form-control" id="form-item8">
+                    <select id="role" name="role">
                         <option value="admin">ADMIN</option>
                         <option value="voter">Voter</option>
                         <option value="candid">Candidate</option>
                     </select>
                 </div>
-
-                <div class="form-control 8" id="form-item8">
-                    <label for="file"><b>Verfication Document</b></label>
-                    <input type="file" class="inp-field" name="vfile" required>
-                    <small>Error message</small>
-                </div>
+                <button type="button" class="signup" onclick="validation()">Sign Up</button>
             </form>
-            <button class="signup" onclick="validation()">Sign Up</button>
         </div>
-    </div>
+    </main>
+    <footer></footer>
     <script src="/js/up-script.js"></script>
 </body>
 

@@ -34,6 +34,7 @@ if (form) {
 }
 stars();
 */
+
 function validation() {
     var uval = user.value.trim();
     var pval = pass.value.trim();

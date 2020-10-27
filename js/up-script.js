@@ -1,13 +1,12 @@
-var RE_EMAIL = /^(\w+[\-\.])*\w+@(\w+\.)+[A-Za-z]+$/;
-var RE_PASSWORD = /^[A-Za-z\d]{6,8}+$/;
-var RE_NAME = /^[a-zA-Z]+$/;
-var RE_MOB = /^[6-9]{3}-[0-9]{2}-[0-9]{3}+$/;
-
-var firstname = document.forms["myForm"]["fname"];
-var mobile = document.forms["myForm"]["mnum"];
-var email = document.forms["myForm"]["email"];
-var password = document.forms["myForm"]["psw"];
-var rep_password = document.forms["myForm"]["psw-repeat"];
+var RE_PASSWORD = /^((?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[\W]).{6,20})$/;
+var RE_NAME = /^[A-Za-z]+ ([A-Za-z]+)+$/;
+var RE_MOB = /^[6-9]{1}\d{9,10}$/;
+var RE_EMAIL = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/; 
+const firstname = document.getElementById("fname");
+const mobile = document.getElementById("mnum");
+const email = document.getElementById("email");
+const password = document.getElementById("psw");
+const rep_password = document.getElementById("psw-repeat");
 
 function validation() {
     var fval = firstname.value;
@@ -16,45 +15,44 @@ function validation() {
     var pval = password.value;
     var rpval = rep_password.value;
 
-    if (fval === '') {
-        setError(firstname, 'Username cannot be blank');
-        return false;
-    } else if (!RE_NAME.test(fval)) {
-        console.log(fval);
-        setError(firstname, "Not a valid Username");
-        return false;
+    if (fval === "") {
+        setError(firstname, 'Name cannot be blank');
+    } else if ((!RE_NAME.test(fval)) && (fval.length > 5)) {
+        setError(firstname, "Not a valid Name");
+    } else {
+        console.log(fval.length);
+        setSuccess(firstname);
     }
 
-    if (mval === '') {
+    if (mval === "") {
         setError(mobile, 'Mobile Number cannot be blank');
-        return false;
     } else if (!RE_MOB.test(mval)) {
         setError(mobile, "Not a valid Mobile number");
-        return false;
+    } else {
+        setSuccess(mobile);
     }
 
-    if (eval == '') {
+    if (eval == "") {
         setError(email, 'Email cannot be blank');
-        return false;
-    } else if (!RE_EMAIL.test(email)) {
-        setError(email, "Not a valid Email")
-        return false;
+    } else if (!RE_EMAIL.test(eval)) {
+        setError(email, "Not a valid Email");
+    } else {
+        setSuccess(email);
     }
 
     if (pval == '') {
-        setError(pval, 'Password cannot be blank');
-        return false;
-    } else if (!RE_PASSWORD.test(password)) {
-        setError(pval, 'Not a valid Password');
-        return false;
+        setError(password, 'Password cannot be blank');
+    } else if (!RE_PASSWORD.test(pval)) {
+        setError(password, 'Not a valid Password');
     } else if (pval != rpval) {
-        setError(pval, 'Password Mismatch');
-        return false;
-    } 
+        setError(rep_password, 'Password Mismatch');
+    } else {
+        setSuccess(password);
+        setSuccess(rep_password);
+    }
 
     // setSuccess();
 }
-
 function setError(inp, message) {
     const inpParent = inp.parentElement;
     const small = inpParent.querySelector('small');
@@ -62,6 +60,7 @@ function setError(inp, message) {
     small.innerText = message;
 }
 
-function setSuccess() {
+function setSuccess(inp) {
+    const inpParent = inp.parentElement;
     inpParent.className = 'form-control success';
 }
