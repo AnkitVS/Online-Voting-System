@@ -7,7 +7,7 @@ This is a project for my credit course of *Web Development*. Though I'm new to m
 - [x] HTML, CSS
 - [ ] JS
 - [ ] PHP
-- [ ] Database Connectivity
+- [ ] Backend Connectivity [Java](https://github.com/AnkitVS/Online-Voting-System-Java)
 - [ ] Java Servlets
 ---
 ### Time Line
