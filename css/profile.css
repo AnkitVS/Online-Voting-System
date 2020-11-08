@@ -53,6 +53,10 @@ form button{
     border-style: hidden;
     border-radius: 20px;
 }
+form button:hover,
+form button:focus{
+border: #7efc002f 3px solid;
+}
 
 /* ---------Container Design Start---------- */
 footer{

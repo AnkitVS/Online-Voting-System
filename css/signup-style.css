@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap');
 body {
   background-color: black;
   font-family: "Lucida Bright";
@@ -6,28 +7,32 @@ body {
 }
 
 /*-------NavBar Start------*/
-nav{
-  width: 100%;
-  background-image: radial-gradient(circle, #023788, #532a96);
+/*-------NavBar Start------*/
+header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2%;
 }
-
-nav ul {
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  overflow: hidden;
-}
-
-nav li a{
-  color: rgb(0, 0, 0);
-  text-align: center;
-  padding: 14px 16px;
+header a{
+  color: #fff;
+  font-family: "Rokkitt",sans-serif;
   text-decoration: none;
 }
-li a:hover {
-  background-image: radial-gradient(circle, #091d3b, #241241);
-  color: white;
+.navbar-logo a{
+  font-size: 35px;
 }
+
+.nav_links li a{
+  font-size: 30px;
+  transition: all .3s ease 0s;
+}
+
+.nav_links li a:hover, .navbar-logo a:hover{
+  color: red;
+  transition: all .3s ease 0s;
+}
+/*-------NavBar End------*/
 
 /*-------NavBar End------*/
 main{

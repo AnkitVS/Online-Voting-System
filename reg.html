@@ -3,14 +3,41 @@
 <meta charset="utf-8">
 <title>Main</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> 
+
 <head>
 
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap');
+
         body {
             background-color: #0c002b;
         }
 
+        /*-------NavBar Start------*/
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 2%;
+        }
+
+        header a {
+            color: #fff;
+            font-family: "Rokkitt", sans-serif;
+            text-decoration: none;
+        }
+
+        .navbar-logo a {
+            font-size: 35px;
+        }
+
+        .navbar-logo a:hover {
+            color: red;
+            transition: all .3s ease 0s;
+        }
+
+        /*-------NavBar End------*/
         .box {
             position: absolute;
             top: 50%;
@@ -408,13 +435,14 @@
                 text-shadow: 0 0 50px #10e822;
             }
         }
-
-        
     </style>
 </head>
 
 <body>
-    <div class="box">
+    <header>
+        <div class="navbar-logo"><a href="land.html">Home</a></div>
+    </header>
+    <main class="box">
         <span></span>
         <span></span>
         <span></span>
@@ -435,7 +463,7 @@
 
             </div>
         </div>
-    </div>
+    </main>
 </body>
 
 </html>
