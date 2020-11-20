@@ -1,0 +1,76 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #0C090A;
+  font-family: "Montserrat", sans-serif;
+}
+/*-------NavBar Start------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2%;
+}
+header a {
+  color: #fff;
+  font-family: "Rokkitt", sans-serif;
+  text-decoration: none;
+}
+.navbar-logo a {
+  font-size: 35px;
+}
+
+.nav_links li a {
+  font-size: 30px;
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover,
+.navbar-logo a:hover {
+  color: red;
+  transition: all 0.3s ease 0s;
+}
+/*-------NavBar End------*/
+
+
+/*--------Main Container design  ------ START--------*/
+main {
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main .container {
+    height: 450px;
+    width: 400px;
+    padding: 50px;
+    background-color:#101314;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  
+    border-radius: 20px;
+    box-shadow: 0 5px 10px 0px #565051;
+    transform: translatex(0px);
+    animation: float 6s ease-in-out infinite;
+  }
+  /*--------Main Container design  ------ END--------*/
+  /*--------Form design  ------ START--------*/
+  form {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: space-between;
+  }
+
+  form label{
+      position: relative;
+      color: #fff;
+      font-family: "Montserrat", sans-serif;
+  }
+
+  /*--------Form design  ------ END--------*/

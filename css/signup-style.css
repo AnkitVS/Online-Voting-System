@@ -2,11 +2,11 @@
 body {
   background-color: black;
   font-family: "Lucida Bright";
-  padding: 0%;
-  margin: 0%;
+  padding: 0;
+  margin: 0;
 }
 
-/*-------NavBar Start------*/
+
 /*-------NavBar Start------*/
 header{
   display: flex;
@@ -34,7 +34,6 @@ header a{
 }
 /*-------NavBar End------*/
 
-/*-------NavBar End------*/
 main{
   display: flex;
   justify-content: center;

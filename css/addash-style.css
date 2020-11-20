@@ -1,0 +1,109 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap");
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #1a1110;
+  font-family: "Montserrat", sans-serif;
+}
+/*-------NavBar Start------*/
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 2%;
+}
+header a {
+  color: #fff;
+  font-family: "Rokkitt", sans-serif;
+  text-decoration: none;
+}
+.navbar-logo a {
+  font-size: 35px;
+}
+
+.nav_links li a {
+  font-size: 30px;
+  transition: all 0.3s ease 0s;
+}
+
+.nav_links li a:hover,
+.navbar-logo a:hover {
+  color: red;
+  transition: all 0.3s ease 0s;
+}
+/*-------NavBar End------*/
+
+/*--------Main Container design  ------ START--------*/
+main {
+  padding: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+main .container {
+  height: 450px;
+  width: 400px;
+  padding: 50px;
+  background-color: #1b1b1b;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 20px;
+  box-shadow: 0 5px 15px 0px rgba(63, 63, 63, 0.6);
+  transform: translatex(0px);
+  animation: float 6s ease-in-out infinite;
+}
+
+
+/*------------Button Design Start------------------*/
+main .container button {
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  line-height: 1;
+  margin: 0.5em;
+  padding: 1em 2em;
+}
+
+.pulse {
+  color: #ef926e;
+}
+.pulse:hover,
+.pulse:focus {
+  border-color: #d68b6d;
+  color: #ef976e;
+
+  animation: pulse 1s;
+  transform: translateY(-0.25em);
+  box-shadow: 0 0 0 2em rgba(255, 255, 255, 0);
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 #efb36e;
+  }
+}
+/*------------Button Design End------------------*/
+@keyframes float {
+  0% {
+    box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.5);
+    transform: translatey(0);
+  }
+  50% {
+    box-shadow: 0 25px 15px 0 rgba(27, 27, 27, 0.5);
+    transform: translatey(-10px);
+  }
+  100% {
+    box-shadow: 0 25px 15px 0 rgba(0, 0, 0, 0.6);
+    transform: translatey(0px);
+  }
+}
+/*--------Main Container design  ------ END --------*/
+footer {
+  border: 2px solid red;
+  height: 30px;
+}
