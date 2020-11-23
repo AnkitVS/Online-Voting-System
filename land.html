@@ -5,35 +5,83 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link href="css/land-style.css" rel="stylesheet" type="text/css" />
+  <script src="https://kit.fontawesome.com/588fa32905.js" crossorigin="anonymous"></script>
   <title>HOME</title>
 </head>
 
 <body>
   <header>
     <div class="navbar-logo"><a href="land.html">Home</a></div>
-    <nav class="nav_links">
-      <li><a href="reg.html">Vote</a></li>
+    <nav>
+      <ul>
+        <li><a href="reg.html">Vote</a></li>
+      </ul>
     </nav>
   </header>
-  <main class="grid-container">
-    <div class="slider">
-    </div>
-    <div class="news">
-      <div class="news-head">NEWS ALERT</div>
-      <div class="news-content">
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry.
-        </p>
+  <main>
+    <div class="container">
+      <div class="slider">
+      </div>
+      <div class="news">
+        <div class="news-head">NEWS ALERT</div>
+        <div class="news-content">
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry.
+          </p>
+        </div>
+      </div>
+      <div class="item">
+        <div class="item-1"></div>
+        <div class="item-2"></div>
+        <div class="item-3"></div>
       </div>
     </div>
-    <div class="main">
-      <div class="item-1"></div>
-      <div class="item-2"></div>
-      <div class="item-3"></div>
-    </div>
+
   </main>
-  <footer><iframe src="footer.html"></iframe>
+  <footer>
+    <div class="container">
+      <div class="qlinks">
+        <h2>Quick Links</h2>
+        <ul>
+          <li><a href="login.html">Login</a></li>
+          <li><a href="signup.html">Sign Up</a></li>
+        </ul>
+      </div>
+      <div class="contact">
+        <h2>Contact Info</h2>
+        <form action="mailto:ankitved01@gmail.com" method="post" enctype="text/plain">
+          <div>
+            <label for="name">Name:
+              <input type="text" name="name" id="name" />
+            </label>
+          </div>
+          <div>
+            <label for="email">Email:
+              <input type="text" name="email" id="email" />
+            </label>
+          </div>
+          <div>
+            <label>Comments:</label>
+            <br />
+            <textarea name="comments" rows="3" cols="18" placeholder="Send your comments to us....."
+              style="resize: none;"></textarea>
+          </div>
+          <div>
+            <input type="submit" name="submit" value="Send" />
+          </div>
+        </form>
+      </div>
+      <div class="copy">
+        <p>Copyright &copy; Ankit Ved 2020</p>
+        <span>
+          <ul>
+            <li><a href="https://github.com/AnkitVS"><i class="fab fa-github-alt"></i></a></li>
+            <li><a href="https://www.linkedin.com/in/ankit-ved-ashm/"><i class="fab fa-linkedin-in"></i></a></li>
+          </ul>
+        </span>
+      </div>
+    </div>
   </footer>
 </body>
 

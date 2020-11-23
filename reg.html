@@ -4,6 +4,7 @@
 <title>Main</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'> 
+<script src="https://kit.fontawesome.com/588fa32905.js" crossorigin="anonymous"></script>
 
 <head>
 
@@ -435,6 +436,62 @@
                 text-shadow: 0 0 50px #10e822;
             }
         }
+
+        /* -----Footer Design------START----------- */
+footer {
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  padding: 10px;
+  position: fixed;
+  bottom: 0;
+}
+
+/*--------Copy Style ---Start------------------*/
+footer .container .copy {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container .copy p {
+  color: #999;
+}
+
+footer .container .copy ul {
+  display: flex;
+}
+
+footer .container .copy ul li {
+  list-style: none;
+}
+
+footer .container .copy ul li a {
+  width: 30px;
+  height: 25px;
+  background: #686868;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 0.5s ease-in;
+}
+
+footer .container .copy ul li a:hover {
+  background: #f00;
+}
+
+footer .container .copy ul li a .fab {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* -----Footer design-----END------ */
     </style>
 </head>
 
@@ -464,6 +521,20 @@
             </div>
         </div>
     </main>
+    <footer>
+        <div class="container">
+            <div class="copy">
+                <p>Copyright &copy; Ankit Ved 2020</p>
+                <span>
+                    <ul>
+                        <li><a href="https://github.com/AnkitVS"><i class="fab fa-github-alt"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/ankit-ved-ashm/"><i class="fab fa-linkedin-in"></i></a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </footer>
 </body>
 
 </html>
