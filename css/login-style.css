@@ -1,72 +1,85 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap');
-body{
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rokkitt:wght@700&display=swap");
+body {
   margin: 0;
+  padding: 0;
+  height: 100vh;
   background-color: rgb(0, 0, 0);
-  font-family: "Montserrat",sans-serif;
+  font-family: "Montserrat", sans-serif;
+  box-sizing: border-box;
 }
-/*--------Main Container design  ------ START--------*/
-main{
-    display: grid;
-    grid-template-columns: auto 20vh auto 20vh auto;
-    grid-template-rows: auto 5vw auto 5vw 5vw;
-    height: 90%;
-}
-/*--------Main Container design  ------ END --------*/
 
-/*-------NavBar Start------*/
-header{
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 2%;
+/*-------Header------ START------*/
+header {
+  transition: all 0.3s ease 0s;
+  background: #000;
+  width: 100%;
+  height: 50px;
 }
-header a{
+header .navbar-logo {
+  display: inline-block;
+  padding: 10px 30px;
+}
+header .navbar-logo a,
+nav ul li a {
   color: #fff;
-  font-family: "Rokkitt",sans-serif;
+  font-family: "Rokkitt", sans-serif;
   text-decoration: none;
-}
-.navbar-logo a{
-  font-size: 35px;
-}
-
-.nav_links li a{
   font-size: 30px;
-  transition: all .3s ease 0s;
+}
+nav {
+  float: right;
+  height: 45px;
+  margin-right: 30px;
+  
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+nav ul {
+  list-style-type: none;
+  list-style: none;
+  color: #fff;
 }
 
-.nav_links li a:hover, .navbar-logo a:hover{
+nav ul li a:hover,
+.navbar-logo a:hover {
   color: red;
-  transition: all .3s ease 0s;
 }
-/*-------NavBar End------*/
+/*-------Header ------END------*/
 
+/*--------Main Design  ------ START--------*/
+main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+
+}
 /*--------Login-Box design  ------ START --------*/
 .login-box {
-  grid-area: 2 / 3 / 5 / 5;
-  
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  
-  max-width: 500px;
-  max-height: 400px;
-  
-  background:url(/res/img/log_back.jpg);   
-  background-repeat: no-repeat;
+
+  width: 500px;
+  height: 400px;
+  border-radius: 20px;
+
   background-size: cover;
-  background-position: center;
-  
+  background: url(/res/img/log_back.jpg) no-repeat center;
+
   opacity: 0.6;
   z-index: 5;
   box-shadow: 0px 30px 100px -5px #eceaca inset;
 }
 .login-box:hover,
-.login-box:focus{
-    box-shadow: 0px 30px 50px -5px #ffdd7f ;
+.login-box:focus {
+  box-shadow: 0px 30px 50px -5px #ffdd7f;
 }
 /*---------Heading design  ------ Start------*/
-.heading{
+.heading {
   width: 100px;
   margin-left: 80px;
   padding-left: 5px;
@@ -84,30 +97,29 @@ header a{
 /*---------heading design  ------ END------*/
 
 /*-----------Form  design  ------ Start---------*/
-form{
+form {
   width: 300px;
   height: 200px;
-  margin-left: 70px;/* border: #8fc866 2px solid; */
+  margin-left: 70px; /* border: #8fc866 2px solid; */
 }
 
 .form-control {
-	margin-bottom: 10px;
-	padding-bottom: 10px;
-	position: relative;
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  position: relative;
 }
 
 .form-control label {
-	display: inline-block;
+  display: inline-block;
   margin-bottom: 3px;
   font-weight: 900;
 }
 
-
 .form-control input {
-	display: block;
-	font-family: inherit;
-	font-size: 14px;
-	padding: 10px;
+  display: block;
+  font-family: inherit;
+  font-size: 14px;
+  padding: 10px;
   height: 25px;
   width: 300px;
   border-radius: 20px;
@@ -117,45 +129,45 @@ form{
 }
 
 .form-control input:focus {
-	outline: 0;
-	border: #777 2px solid;
+  outline: 0;
+  border: #777 2px solid;
 }
 
 .form-control.success input {
-	border: #2ecc71 2px solid;
+  border: #2ecc71 2px solid;
 }
 
 .form-control.error input {
-	border: #e74c3c  2px solid;
+  border: #e74c3c 2px solid;
 }
 
 .form-control i {
-	visibility: hidden;
-	position: absolute;
-	top: 35px;
-	right: 10px;
+  visibility: hidden;
+  position: absolute;
+  top: 35px;
+  right: 10px;
 }
 
 .form-control.success i.fa-check-circle {
-	color: #2ecc71;
-	visibility: visible;
+  color: #2ecc71;
+  visibility: visible;
 }
 
 .form-control.error i.fa-exclamation-circle {
-	color: #e74c3c;
-	visibility: visible;
+  color: #e74c3c;
+  visibility: visible;
 }
 
 .form-control small {
-	color: #e74c3c;
-	position: absolute;
-	bottom: 0;
-	left: 0;
-	visibility: hidden;
+  color: #e74c3c;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  visibility: hidden;
 }
 
 .form-control.error small {
-	visibility: visible;
+  visibility: visible;
 }
 
 .inp-field:focus,
@@ -168,29 +180,86 @@ form{
 
 /*---------Button design  ------ START---------*/
 .signin {
-    background: none;
-    border: 2px solid;
-    font: inherit;
-    margin-top: 20px;
-    padding: 1em 2em;
-    transition: 0.3s;
-    color: #8fc866;
+  background: none;
+  border: 2px solid;
+  font: inherit;
+  margin-top: 20px;
+  padding: 1em 2em;
+  transition: 0.3s;
+  color: #8fc866;
 }
 
 .signin:hover,
 .signin:focus {
-      box-shadow: inset 6.5em 0 0 0 #e4cb58;
-      border: #e4cb58;
-      color: #fff;
-      letter-spacing:2px;
+  box-shadow: inset 6.5em 0 0 0 #e4cb58;
+  border: #e4cb58;
+  color: #fff;
+  letter-spacing: 2px;
 }
 
-a{
+a {
   text-decoration: none;
 }
 /*----------Button design ------ END-----*/
 /*---------Login-Box design  ------ END------*/
+/*--------Main Design  ------ END --------*/
 
+/* -----Footer Design------START----------- */
+footer {
+  position:fixed;
+  bottom:0;
+  width: 100%;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+  border: rgb(0, 0, 0) solid 10px;
+}
+
+/*--------Copy Style ---Start------------------*/
+footer .container .copy {
+  padding: 10px;
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+footer .container .copy p {
+  color: #999;
+}
+
+footer .container .copy ul {
+  display: flex;
+}
+
+footer .container .copy ul li {
+  list-style: none;
+}
+
+footer .container .copy ul li a {
+  width: 30px;
+  height: 25px;
+  background: #686868;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  text-decoration: none;
+  border-radius: 2px;
+  transition: 0.5s ease-in;
+}
+
+footer .container .copy ul li a:hover {
+  background: #f00;
+}
+
+footer .container .copy ul li a .fab {
+  color: #fff;
+  font-size: 20px;
+}
+
+/* -----Footer design-----END------ */
 /*----------Backgrond design ------ START--*/
 /* .scene {
   grid-area: 2 / 1 / 8 / 8;
