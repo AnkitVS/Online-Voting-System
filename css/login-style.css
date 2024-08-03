@@ -13,6 +13,7 @@ body{
   background-size: cover;
   opacity: 0.6;
   box-shadow: 0px 30px 100px -5px #eceaca inset;
+  border-radius: 50%;
 }
 .login-box:hover,
 .login-box:focus{
@@ -93,7 +94,13 @@ span {
       letter-spacing:2px;
 }
 
+.up{
+  position: relative;
+  left: 140px;
+  bottom: 70px;
+}
 a{
   text-decoration: none;
+  color: #8fc866;
 }
 /* Button design ------ END*/
