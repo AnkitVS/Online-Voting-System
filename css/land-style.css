@@ -65,40 +65,40 @@ header{
 
 @keyframes slide{
     0%{
-        background-image: url(/res/img/img1.jpg);
+        background-image: url(/Online-Voting-System/res/img/img1.jpg);
     }
     16.67%{
-        background-image: url(/res/img/img1.jpg);
+        background-image: url(/Online-Voting-System/res/img/img1.jpg);
     }
     16.68%{
-        background-image: url(/res/img/img2.jpg);
+        background-image: url(/Online-Voting-System/res/img/img2.jpg);
     }
     32.84%{
-        background-image: url(/res/img/img2.jpg);
+        background-image: url(/Online-Voting-System/res/img/img2.jpg);
     }
     32.85%{
-        background-image: url(/res/img/img3.jpg);
+        background-image: url(/Online-Voting-System/res/img/img3.jpg);
     }
     49.51%{
-        background-image: url(/res/img/img3.jpg);
+        background-image: url(/Online-Voting-System/res/img/img3.jpg);
     }
     49.52%{
-        background-image: url(/res/img/img4.jpg);
+        background-image: url(/Online-Voting-System/res/img/img4.jpg);
     }
     66.18%{
-        background-image: url(/res/img/img4.jpg);
+        background-image: url(/Online-Voting-System/res/img/img4.jpg);
     }
     66.19%{
-        background-image: url(/res/img/img5.jpg);
+        background-image: url(/Online-Voting-System/res/img/img5.jpg);
     }
     82.85%{
-        background-image: url(/res/img/img5.jpg);
+        background-image: url(/Online-Voting-System/res/img/img5.jpg);
     }
     82.86%{
-        background-image: url(/res/img/img6.jpg);
+        background-image: url(/Online-Voting-System/res/img/img6.jpg);
     }
     100%{
-        background-image: url(/res/img/img6.jpg);
+        background-image: url(/Online-Voting-System/res/img/img6.jpg);
     }
     
 }
