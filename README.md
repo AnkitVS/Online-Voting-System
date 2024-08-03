@@ -3,6 +3,9 @@ This is a project for my credit course of *Web Development*. Though I'm new to m
 > Let the journey begin.....
 ---
 
+
+Hosted at : [GithubPages](https://ankitvs.github.io/Online-Voting-System/land.html)
+
 ## Major outcomes
 - [x] HTML, CSS
 - [ ] JS
