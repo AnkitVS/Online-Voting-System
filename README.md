@@ -10,7 +10,7 @@ Hosted at : [GithubPages](https://ankitvs.github.io/Online-Voting-System/land.ht
 - [x] HTML, CSS
 - [ ] JS
 - [ ] PHP
-- [ ] Backend Connectivity [Java]((https://github.com/AnkitVS/Online-Voting-Java))
+- [ ] Backend Connectivity [Java](https://github.com/AnkitVS/Online-Voting-Java)
 - [ ] Java Servlets
 ---
 ### Time Line
